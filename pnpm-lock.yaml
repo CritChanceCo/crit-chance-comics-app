@@ -11,10 +11,6 @@ overrides:
 importers:
 
   .:
-    dependencies:
-      '@medusajs/js-sdk':
-        specifier: 2.19.0
-        version: 2.19.0
     devDependencies:
       '@medusajs/eslint-plugin':
         specifier: 2.19.0

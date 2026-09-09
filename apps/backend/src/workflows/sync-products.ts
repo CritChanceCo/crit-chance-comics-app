@@ -7,6 +7,8 @@ import { useQueryGraphStep } from "@medusajs/medusa/core-flows";
 import { syncProductsStep, SyncProductsStepInput } from "./steps/sync-products";
 import { deleteProductsFromMeilisearchStep } from "./steps/delete-products-from-meilisearch";
 
+import { QueryContext } from "@medusajs/framework/utils";
+
 type SyncProductsWorkflowInput = {
   filters?: Record<string, unknown>;
   limit?: number;
@@ -30,14 +32,23 @@ export const syncProductsWorkflow = createWorkflow(
         "tags.id",
         "tags.value",
         "status",
+        "variants.*",
+        "variants.calculated_price.*",
       ],
       pagination: {
         take: limit,
         skip: offset,
       },
       filters,
+      context: {
+        variants: {
+          calculated_price: QueryContext({
+            currency_code: "eur",
+            region_id: "eur",
+          }),
+        },
+      },
     });
-
     const { publishedProducts, unpublishedProductsToDelete } = transform(
       {
         products,

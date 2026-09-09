@@ -18,6 +18,11 @@ export type SyncProductsStepInput = {
       id: string;
       value: string;
     }[];
+    variants?: {
+      id: string;
+      title: string;
+      calculated_price: {}[];
+    }[];
   }[];
 };
 

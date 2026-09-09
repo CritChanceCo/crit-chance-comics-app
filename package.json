@@ -29,6 +29,7 @@
     "turbo": "^2.0.14"
   },
   "dependencies": {
-    "@medusajs/js-sdk": "2.19.0"
+    "@medusajs/js-sdk": "2.19.0",
+    "meilisearch": "^0.62.0"
   }
 }

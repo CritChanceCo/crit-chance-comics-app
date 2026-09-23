@@ -16,6 +16,9 @@ importers:
       '@medusajs/js-sdk':
         specifier: 2.19.0
         version: 2.19.0
+      meilisearch:
+        specifier: ^0.62.0
+        version: 0.62.0
     devDependencies:
       '@medusajs/eslint-plugin':
         specifier: 2.21.1
@@ -1896,6 +1899,12 @@ packages:
   '@medusajs/workflows-sdk@2.21.1':
     resolution: {integrity: sha512-Zf+1qjgJ3N2/5mGpRYtBw5xQLCX1pERYcRSMKmLg9bcBuh+78iSuZnjqOp/1ZnE+WI2L/7eOTE5sHK+h/gdqBQ==}
     engines: {node: '>=20.0.0'}
+
+  '@meilisearch/instant-meilisearch@0.31.3':
+    resolution: {integrity: sha512-bc59iwpKXhCTeD+ndz0ojpAg87BmEoSneD8JRMxMUzJ5ZaDSdt81DJT2Evucdc0nFjFhrdKXF+KAtLwXSEEwdQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      meilisearch: ^0.57
 
   '@mikro-orm/cli@6.6.14':
     resolution: {integrity: sha512-pYo6BBWJEaA9rOBJAyu6IK81v8wed8ScJ9Z3/suyHVAdul6h/Y37qU/FGQqnA8qM7801pMkCWr/36ybgAaYjeQ==}
@@ -6214,6 +6223,10 @@ packages:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
     engines: {node: '>= 0.6'}
 
+  meilisearch@0.62.0:
+    resolution: {integrity: sha512-/ETDW7mmWI2NcSmtJdTPhbjsIbs3VcuapszX5X6JhdHB0XbszPOhqd3EB2bEylL0HK7dgwh/4Z3MdyuycWVf5A==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+
   merge-descriptors@1.0.3:
     resolution: {integrity: sha512-gaNvAS7TZ897/rVaZ0nMtAyxNyi/pdbjbAwUpFQpN70GqnVfOiXpeUUMKRBmzXaSQ8DdTX4/0ms62r2K+hE6mQ==}
 
@@ -10311,6 +10324,10 @@ snapshots:
       - sqlite3
       - supports-color
       - tedious
+
+  '@meilisearch/instant-meilisearch@0.31.3(meilisearch@0.62.0)':
+    dependencies:
+      meilisearch: 0.62.0
 
   '@mikro-orm/cli@6.6.14(pg@8.23.0)':
     dependencies:
@@ -15352,6 +15369,8 @@ snapshots:
   meant@1.0.3: {}
 
   media-typer@0.3.0: {}
+
+  meilisearch@0.62.0: {}
 
   merge-descriptors@1.0.3: {}
 

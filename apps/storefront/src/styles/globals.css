@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+ .ais-Hits-list {
+    @apply grid grid-cols-2 small:grid-cols-3 gap-x-6 gap-y-24 small:gap-y-36;
+  }
+
 @layer base {
   :root {
     --fg-subtle: #ffffff;

@@ -56,3 +56,4 @@ ehthumbs.db
 Thumbs.db
 **/.DS_Store
 /apps/backend/static
+/pnpm-lock.yaml

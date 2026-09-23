@@ -187,8 +187,8 @@ importers:
         specifier: 19.0.5
         version: 19.0.5(react@19.0.5)
       react-instantsearch:
-        specifier: ^7.49.0
-        version: 7.49.0(algoliasearch@5.57.0)(react-dom@19.0.5(react@19.0.5))(react@19.0.5)
+        specifier: ^7.46.0
+        version: 7.46.0(algoliasearch@5.57.0)(react-dom@19.0.5(react@19.0.5))(react@19.0.5)
       server-only:
         specifier: ^0.0.1
         version: 0.0.1
@@ -5545,11 +5545,11 @@ packages:
     resolution: {integrity: sha512-UjOaSel/iddGZJ5xP/Eixh6dY1XghiBw4XK13rCCIJcJfyhhoul/7KhLLUGtebEj6GDYM6Vnx/mVsjx2L/mFIA==}
     engines: {node: '>=12.0.0'}
 
-  instantsearch-ui-components@0.40.0:
-    resolution: {integrity: sha512-iswxns+LY+CsK70eBxAGNk3rNgbbZsHf9Dy+PA+WHahSe/se1N0cZuHNXyvvRepwsuceogft7HGncA2Nqiv8Bw==}
+  instantsearch-ui-components@0.37.0:
+    resolution: {integrity: sha512-HKsTAy8ckxfUXQzp/wLkwHAelsiuwss+at0+zq++iUWj+cMoBmiGlY1DeHAKkZ7kURV/PfXBock2M2KH6dzTxg==}
 
-  instantsearch.js@4.116.0:
-    resolution: {integrity: sha512-d3qolbGBPNCTmoTwSBgXVCXKv/6Ow+gx0AEmNinQyliaoCLXUBgTrh/0dzKJu/j7itw1PYrjUZ6FwtTA1bJnQw==}
+  instantsearch.js@4.113.0:
+    resolution: {integrity: sha512-AzRh95GdtLpslQjWkOWJnvaVCjCDjYidLnQuOL/EOJ9jvEQFH2lzHjRAyKxDqYuZj9bJ6uLKxRhoJQji1ouZHw==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
 
@@ -6982,14 +6982,14 @@ packages:
       react-native:
         optional: true
 
-  react-instantsearch-core@7.49.0:
-    resolution: {integrity: sha512-jSuVck9g/Z1MEfv9MRlBhU7Dx5AIHPyQtdyYbKDuSnR2oaFVSAFc02p+F4hR4xmuoc3XJd5VVB1qfRB0WivqNA==}
+  react-instantsearch-core@7.46.0:
+    resolution: {integrity: sha512-I1z2mPu/Cy7KIUCaoO9DLJ1ql+Jng3Shmy7pdWDBj3HddHaCJad5PEN/adi98daSHfBhJI3UsVNZOon9fO7DLg==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
       react: '>= 16.8.0 < 20'
 
-  react-instantsearch@7.49.0:
-    resolution: {integrity: sha512-08oXw0kw0Ij1qR66drS+lqPfR4R8zbjHtc7nZgK+lA4k6FmpvMEAQopFVeeeIhNQQXg1QoMaTcddIZZoj1dvtw==}
+  react-instantsearch@7.46.0:
+    resolution: {integrity: sha512-VaPoaQtDEmaTq9NxKLnPR1Qu5H0xeq+NnqI7fHs8LFQ/Q4Nml134tsn61ePMwYhq7KjSpsXSLVabmOb9D46P7A==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
       react: '>= 16.8.0 < 20'
@@ -12270,7 +12270,7 @@ snapshots:
       '@types/qs': 6.15.1
       '@types/serve-static': 1.15.10
 
-  '@types/google.maps@3.66.2': {}
+  '@types/google.maps@3.66.0': {}
 
   '@types/graceful-fs@4.1.9':
     dependencies:
@@ -14472,33 +14472,33 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  instantsearch-ui-components@0.40.0(react@18.3.1):
+  instantsearch-ui-components@0.37.0(react@18.3.1):
     dependencies:
       '@swc/helpers': 0.5.18
       markdown-to-jsx: 7.7.17(react@18.3.1)
     transitivePeerDependencies:
       - react
 
-  instantsearch-ui-components@0.40.0(react@19.0.5):
+  instantsearch-ui-components@0.37.0(react@19.0.5):
     dependencies:
       '@swc/helpers': 0.5.18
       markdown-to-jsx: 7.7.17(react@19.0.5)
     transitivePeerDependencies:
       - react
 
-  instantsearch.js@4.116.0(algoliasearch@5.57.0):
+  instantsearch.js@4.113.0(algoliasearch@5.57.0):
     dependencies:
       '@algolia/events': 4.0.1
       '@swc/helpers': 0.5.18
       '@types/dom-speech-recognition': 0.0.1
-      '@types/google.maps': 3.66.2
+      '@types/google.maps': 3.66.0
       '@types/hogan.js': 3.0.5
       '@types/qs': 6.15.1
       algoliasearch: 5.57.0
       algoliasearch-helper: 3.29.3(algoliasearch@5.57.0)
       hogan.js: 3.0.2
       htm: 3.1.1
-      instantsearch-ui-components: 0.40.0(react@18.3.1)
+      instantsearch-ui-components: 0.37.0(react@18.3.1)
       preact: 10.29.8
       qs: 6.15.3
       react: 18.3.1
@@ -16119,26 +16119,26 @@ snapshots:
     optionalDependencies:
       react-dom: 18.3.1(react@18.3.1)
 
-  react-instantsearch-core@7.49.0(algoliasearch@5.57.0)(react@19.0.5):
+  react-instantsearch-core@7.46.0(algoliasearch@5.57.0)(react@19.0.5):
     dependencies:
       '@swc/helpers': 0.5.18
       algoliasearch: 5.57.0
       algoliasearch-helper: 3.29.3(algoliasearch@5.57.0)
-      instantsearch.js: 4.116.0(algoliasearch@5.57.0)
+      instantsearch.js: 4.113.0(algoliasearch@5.57.0)
       react: 19.0.5
       use-sync-external-store: 1.6.0(react@19.0.5)
     transitivePeerDependencies:
       - preact-render-to-string
 
-  react-instantsearch@7.49.0(algoliasearch@5.57.0)(react-dom@19.0.5(react@19.0.5))(react@19.0.5):
+  react-instantsearch@7.46.0(algoliasearch@5.57.0)(react-dom@19.0.5(react@19.0.5))(react@19.0.5):
     dependencies:
       '@swc/helpers': 0.5.18
       algoliasearch: 5.57.0
-      instantsearch-ui-components: 0.40.0(react@19.0.5)
-      instantsearch.js: 4.116.0(algoliasearch@5.57.0)
+      instantsearch-ui-components: 0.37.0(react@19.0.5)
+      instantsearch.js: 4.113.0(algoliasearch@5.57.0)
       react: 19.0.5
       react-dom: 19.0.5(react@19.0.5)
-      react-instantsearch-core: 7.49.0(algoliasearch@5.57.0)(react@19.0.5)
+      react-instantsearch-core: 7.46.0(algoliasearch@5.57.0)(react@19.0.5)
     transitivePeerDependencies:
       - preact-render-to-string
 

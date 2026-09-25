@@ -6,6 +6,37 @@
     @apply grid grid-cols-2 small:grid-cols-3 gap-x-6 gap-y-24 small:gap-y-36;
   }
 
+.custom-search-box .ais-SearchBox-form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 10;
+    border-bottom: 2px solid;
+      color: #ffffff;
+}
+.custom-search-box svg.ais-SearchBox-submitIcon {
+  fill: #ffffff;
+  width: 20px;
+  height: 20px;
+}
+
+.custom-search-box .ais-SearchBox-submitIcon {
+    margin-bottom: 10px;
+}
+.custom-search-box .ais-SearchBox-input {
+ width: 100%;
+  background:none;
+  color: #ffffff;
+  outline: none;
+}
+/* This styles the placeholder text */
+.custom-search-box .ais-SearchBox-input::placeholder {
+  color: #ffffff; /* Use a muted color from your theme */
+  opacity: 1; /* Optional: make it more subtle */
+
+}
+
+
 @layer base {
   :root {
     --fg-subtle: #ffffff;
@@ -122,4 +153,9 @@
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
   }
+
+
+
 }
+
+

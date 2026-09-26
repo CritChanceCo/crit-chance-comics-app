@@ -27,16 +27,20 @@ export default function ProductPreview({
     product,
   })
 
+  const rotation = Math.random() * 10 - 5
+
   return (
     <LocalizedClientLink href={`/products/${product.handle}`} className="group">
       <div data-testid="product-wrapper">
-        <Thumbnail
-          thumbnail={product.thumbnail}
-          images={product.images}
-          size="full"
-          isFeatured={isFeatured}
-        />
-        <div className="flex txt-compact-medium mt-4 justify-between">
+        <div style={{ transform: `rotate(${rotation}deg)` }}>
+          <Thumbnail
+            thumbnail={product.thumbnail}
+            images={product.images}
+            size="full"
+            isFeatured={isFeatured}
+          />
+        </div>
+        <div className="txt-compact-medium mt-4 flex justify-between">
           <Text className="text-ui-fg-subtle" data-testid="product-title">
             {product.title}
           </Text>

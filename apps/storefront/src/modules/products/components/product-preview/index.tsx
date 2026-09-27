@@ -36,8 +36,8 @@ export default function ProductPreview({
           <Thumbnail
             thumbnail={product.thumbnail}
             images={product.images}
-            size="full"
-            isFeatured={isFeatured}
+            className="rounded-none"
+            size="large"
           />
         </div>
         <div className="txt-compact-medium mt-4 flex justify-between">

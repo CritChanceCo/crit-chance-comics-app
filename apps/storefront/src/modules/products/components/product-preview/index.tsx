@@ -27,12 +27,15 @@ export default function ProductPreview({
     product,
   })
 
-  const rotation = Math.random() * 10 - 5
+  const rotation = Math.random() * 5 - 3
 
   return (
     <LocalizedClientLink href={`/products/${product.handle}`} className="group">
       <div data-testid="product-wrapper">
-        <div style={{ transform: `rotate(${rotation}deg)` }}>
+        <div
+          className="rotate-[var(--rotation)] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] group-hover:rotate-0"
+          style={{ "--rotation": `${rotation}deg` } as React.CSSProperties}
+        >
           <Thumbnail
             thumbnail={product.thumbnail}
             images={product.images}

@@ -20,20 +20,14 @@ export default function MeilisearchProductRail({
         indexName={process.env.NEXT_PUBLIC_MEILISEARCH_INDEX_NAME}
       >
         <div className="flex flex-row items-baseline justify-between gap-10 py-10 content-container">
-          <LocalizedClientLink
-            href="/"
-            className="xl:w-[250%] small:block"
-            data-testid="nav-store-link"
-          >
-            <Image
-              src="/images/crit-chance-comics.svg"
-              alt="Crit Chance Comics Logo"
-              width={3650}
-              height={1945}
-              className="object-contain"
-              priority
-            />
-          </LocalizedClientLink>{" "}
+          <Image
+            src="/images/crit-chance-comics.svg"
+            alt="Crit Chance Comics Logo"
+            width={3650}
+            height={1945}
+            className="object-contain sm:w-[50%] xl:w-[250%]"
+            priority
+          />
           <SearchBox
             placeholder="SEARCH"
             className="custom-search-box w-full"

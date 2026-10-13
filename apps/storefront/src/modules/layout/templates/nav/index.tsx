@@ -6,8 +6,8 @@ import { listRegions } from "@lib/data/regions"
 import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
-import Search from "@modules/layout/components/search"
-import SideMenu from "@modules/layout/components/side-menu"
+
+import Image from "next/image"
 
 export default async function Nav() {
   const [regions, locales, currentLocale] = await Promise.all([
@@ -17,36 +17,29 @@ export default async function Nav() {
   ])
 
   return (
-    <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 mx-auto border-b duration-200 bg-ui-bg-subtle border-ui-border-base">
-        <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
-          <div className="flex-1 basis-0 h-full flex items-center">
-            <div className="h-full">
-              <SideMenu regions={regions} locales={locales} currentLocale={currentLocale} />
-            </div>
-          </div>
-
-          <div className="flex items-center h-full">
+    <div className="group sticky inset-x-0 top-0 z-50">
+      <header className="bg-ui-bg-subtle relative mx-auto h-20 duration-200">
+        <nav className="txt-xsmall-plus text-ui-fg-subtle text-small-regular flex h-full w-full items-center justify-between content-container">
+          <div className="flex h-full flex-1 basis-0 items-center">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="h-full w-28 items-center"
               data-testid="nav-store-link"
             >
-              Medusa Store
+              <Image
+                src="/images/crit-chance-comics.svg"
+                alt="Crit Chance Comics Logo"
+                width={3650}
+                height={1945}
+                className="h-full object-contain"
+                priority
+              />
             </LocalizedClientLink>
           </div>
 
-          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
-            <Search />
-            <div className="hidden small:flex items-center gap-x-6 h-full">
-              <LocalizedClientLink
-                className="hover:text-ui-fg-base"
-                href="/account"
-                data-testid="nav-account-link"
-              >
-                Account
-              </LocalizedClientLink>
-            </div>
+          <div className="flex h-full items-center"></div>
+
+          <div className="flex h-full flex-1 basis-0 items-center justify-end gap-x-6">
             <Suspense
               fallback={
                 <LocalizedClientLink
@@ -60,6 +53,20 @@ export default async function Nav() {
             >
               <CartButton />
             </Suspense>
+            <LocalizedClientLink
+              href="/account"
+              className="h-full w-24 items-center"
+              data-testid="nav-account-link"
+            >
+              <Image
+                src="/images/account.png"
+                alt=""
+                width={960}
+                height={313}
+                className="h-full object-contain"
+                priority
+              />
+            </LocalizedClientLink>
           </div>
         </nav>
       </header>

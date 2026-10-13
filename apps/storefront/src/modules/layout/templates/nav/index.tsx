@@ -18,12 +18,12 @@ export default async function Nav() {
 
   return (
     <div className="group sticky inset-x-0 top-0 z-50">
-      <header className="bg-ui-bg-subtle relative mx-auto h-16 duration-200">
+      <header className="bg-ui-bg-subtle relative mx-auto h-20 duration-200">
         <nav className="txt-xsmall-plus text-ui-fg-subtle text-small-regular flex h-full w-full items-center justify-between content-container">
           <div className="flex h-full flex-1 basis-0 items-center">
             <LocalizedClientLink
               href="/"
-              className="h-full w-20 items-center"
+              className="h-full w-28 items-center"
               data-testid="nav-store-link"
             >
               <Image
@@ -53,21 +53,20 @@ export default async function Nav() {
             >
               <CartButton />
             </Suspense>
-            <div className="items-center gap-x-6 small:flex">
-              <LocalizedClientLink
-                href="/account"
-                data-testid="nav-account-link"
-              >
-                <Image
-                  src="/images/account.png"
-                  alt=""
-                  width={256}
-                  height={256}
-                  className="h-auto w-20"
-                  priority
-                />
-              </LocalizedClientLink>
-            </div>
+            <LocalizedClientLink
+              href="/account"
+              className="h-full w-24 items-center"
+              data-testid="nav-account-link"
+            >
+              <Image
+                src="/images/account.png"
+                alt=""
+                width={960}
+                height={313}
+                className="h-full object-contain"
+                priority
+              />
+            </LocalizedClientLink>
           </div>
         </nav>
       </header>
